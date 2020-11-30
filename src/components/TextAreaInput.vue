@@ -9,7 +9,7 @@
 export default {
     data() {
         return {
-            textArea: '[{code: "field1", caption: "поле 1", type: "number"}]'
+            textArea: '[{"code": "field1", "caption": "поле 1", "type": "number"}]'
         };
     },
     watch: {

@@ -19,7 +19,7 @@ export default createStore({
     mutations: {
         changeTextArea(state, newAreA) {
             try {
-                var json = eval(newAreA);
+                var json = JSON.parse(newAreA);
                 state.components = []
                 if ( typeof json === "object" && Array.isArray(json)) {
                     json.forEach((component) => {
@@ -28,7 +28,7 @@ export default createStore({
                 }
             }
             catch (e) {
-                console.log('Bad')
+                console.log('Bad json')
             }
         },
         createFilter(state, id_components) {
